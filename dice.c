@@ -5,18 +5,24 @@
 int main(){
 
   int Die1, Die2;
+  char name;
 
-  /* 乱数の種を初期化 */
+  /* ask name */
+  printf("What is your name?\n  > ");
+  scanf("%s",&name);
+  printf("Hello, %s!\n\n",&name);
+
+  /* rolling dice */
+
   srand(time(NULL));
 
-  /* サイコロを振る */
   Die1 = rand() % 6 + 1;
   Die2 = rand() % 6 + 1;
 
-  /* サイコロの出目を出力 */
+
+  /* output dice */
   printf("Die1 : %d \n", Die1);
   printf("Die2 : %d \n", Die2);
-
 
   return 0;
 }
