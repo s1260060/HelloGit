@@ -4,19 +4,32 @@
 
 int main(){
 
-  int Die1, Die2;
+  int Die1, Die2, Total;
+  char name;
 
-  /* 乱数の種を初期化 */
+  /* ask name */
+  printf("What is your name?\n  > ");
+  scanf("%s",&name);
+  printf("Hello, %s!\n\n",&name);
+
+  /* rolling dice */
+
   srand(time(NULL));
 
-  /* サイコロを振る */
   Die1 = rand() % 6 + 1;
   Die2 = rand() % 6 + 1;
 
-  /* サイコロの出目を出力 */
+  Total = Die1 + Die2;
+
+
+  /* output dice */
+  printf("Rolling the dice...\n");
   printf("Die1 : %d \n", Die1);
   printf("Die2 : %d \n", Die2);
+  printf("Total value : %d\n", Total);
 
+  if(Total>7) printf("You won\n");
+  else printf("You lost\n");
 
   return 0;
 }
