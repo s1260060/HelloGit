@@ -5,12 +5,12 @@
 int main(){
 
   int Die1, Die2, Total;
-  char name;
+  char name[10];
 
   /* ask name */
   printf("What is your name?\n  > ");
-  scanf("%s",&name);
-  printf("Hello, %s!\n\n",&name);
+  scanf("%s",name);
+  printf("Hello, %s!\n\n",name);
 
   /* rolling dice */
 
@@ -24,12 +24,12 @@ int main(){
 
   /* output dice */
   printf("Rolling the dice...\n");
-  printf("Die1 : %d \n", Die1);
-  printf("Die2 : %d \n", Die2);
-  printf("Total value : %d\n", Total);
+  printf("Die1 : %d \n",Die1);
+  printf("Die2 : %d \n",Die2);
+  printf("Total value : %d\n",Total);
 
-  if(Total>7) printf("You won\n");
-  else printf("You lost\n");
+  if(Total>7) printf("%s won\n",name);
+  else if(Total<=7) printf("%s lost\n",name);
 
   return 0;
 }
